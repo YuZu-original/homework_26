@@ -30,7 +30,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           source: "deploy/docker-compose.yaml"
-          target: "deploy"
+          target: "deploy1"
           strip_components: 1
       - name: run
         uses: appleboy/ssh-action@master
@@ -39,5 +39,5 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd deploy
+            cd deploy1
             docker-compose up -d
