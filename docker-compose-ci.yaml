@@ -1,0 +1,7 @@
+version: '3.3'
+
+services:
+  web:
+    image: yuzudev/test_app:$GITHUB_REF_NAME-$GITHUB_RUN_ID
+    ports:
+      - "80:5000"
